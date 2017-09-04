@@ -10,10 +10,16 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\FLTKFlexVariantRowTable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\FLTKFlexVariantRowTable.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BE97DCA4-D843-4484-A236-DC8E7D3D721C}</ProjectGuid>
+    <ProjectGuid>{C0007DF6-E6F2-40A2-894A-AC2C2B239D5C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>FLTKVariantRowTableLib</RootNamespace>
+    <RootNamespace>FLTKFlexVariantRowTable</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -51,14 +57,14 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>G:\boost\boost_1_58_0;G:\FLTK\fltk-1.3.4\fltk-1.3.4-1;..\\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\BOOST\boost_1_58_0;G:\FLTK\fltk-1.3.4\fltk-1.3.4-1;..\\;..\\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>G:\BOOST\lib_vs2012;G:\FLTK\fltk-1.3.4\fltk-1.3.4-1\lib\vc110\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fltk.lib;fltkforms.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>G:\FLTK\fltk-1.3.4\fltk-1.3.4-1\lib\vc110\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fltkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -69,25 +75,17 @@
       <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>G:\boost\boost_1_58_0;G:\FLTK\fltk-1.3.4\fltk-1.3.4-1;..\\src;..\\FLTKVariantRowTableLib;..\\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\boost\boost_1_58_0;G:\FLTK\fltk-1.3.4\fltk-1.3.4-1;..\\src;..\\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>G:\BOOST\lib_vs2012;G:\FLTK\fltk-1.3.4\fltk-1.3.4-1\lib\vc110\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fltk.lib;fltkforms.lib;comctl32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>G:\FLTK\fltk-1.3.4\fltk-1.3.4-1\lib\vc110\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\FLTKVariantRowTable.cpp" />
-    <ClCompile Include="varianttable_main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="FLTKVariantRowTable.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
